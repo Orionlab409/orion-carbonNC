@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Orion Carbon - Contracts & Agreements</title>
+
+<!-- Load Inter Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* -------------------- Shared Styles (from index.html) -------------------- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body, html { font-family: 'Inter', sans-serif; background: #f5f7fa; color: #1a1a1a; line-height: 1.7; }
+a { text-decoration: none; color: inherit; }
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3.125rem;
+    background: #0b1f34;
+    color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.header .logo { font-weight: 800; font-size: 1.5rem; }
+.header nav a {
+    margin-left: 1.5625rem;
+    font-weight: 600;
+    color: #fff;
+    transition: color 0.3s ease;
+    padding: 5px 0;
+}
+.header nav a:hover,
+.header nav a.active { color: #00bfff; }
+
+/* Content Layout */
+.content-section { padding: 4rem 1.25rem; max-width: 1100px; margin: 0 auto; }
+.content-section h1 { font-size: 2.5rem; font-weight: 800; color: #0b1f34; margin-bottom: 0.5rem; text-align: center; }
+.content-section .subtitle { text-align: center; max-width: 800px; margin: 0 auto 50px auto; font-size: 1.1rem; color: #555; }
+.content-section p { margin-bottom: 1.5rem; font-size: 1.1rem; }
+
+/* Agreement Cards/Sections */
+.agreement-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 3rem;
+}
+.agreement-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(11, 31, 52, 0.05);
+    border-left: 5px solid;
+    transition: transform 0.3s ease;
+}
+.agreement-card:hover {
+    transform: translateY(-3px);
+}
+.agreement-card h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #0b1f34;
+}
+.card-dev { border-left-color: #0077ff; }
+.card-token { border-left-color: #10b981; }
+.card-academy { border-left-color: #ff9900; }
+.agreement-card p { font-size: 1rem; }
+.agreement-card ul { 
+    list-style: none; 
+    padding: 0;
+    margin-top: 15px;
+}
+.agreement-card li {
+    padding-left: 25px;
+    position: relative;
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+.agreement-card li::before {
+    content: "•";
+    color: #0077ff;
+    position: absolute;
+    left: 0;
+    font-weight: 900;
+}
+.card-token li::before { color: #10b981; }
+.card-academy li::before { color: #ff9900; }
+
+
+/* Engagement Process */
+.process-section {
+    background: #e6f0ff;
+    padding: 40px;
+    border-radius: 15px;
+    margin-top: 3rem;
+}
+.process-section h2 {
+    font-size: 2rem;
+    color: #0b1f34;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.process-steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 30px;
+}
+.step {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.step-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #0077ff;
+    margin-bottom: 10px;
+}
+.step h3 {
+    font-size: 1.2rem;
+    color: #0b1f34;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.step p {
+    font-size: 0.95rem;
+    color: #555;
+    margin: 0;
+}
+
+/* Footer */
+.footer { text-align: center; padding: 1.5625rem; background: #0b1f34; color: #fff; font-weight: 500; margin-top: 3rem;}
+.footer .legal-links a {
+    color: #00bfff;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+.footer .legal-links a:hover { color: #fff; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header { flex-direction: column; text-align: center; padding: 20px; }
+    .header nav { margin-top: 10px; display: flex; flex-wrap: wrap; justify-content: center; }
+    .header nav a { margin: 5px 10px; }
+    .content-section { padding: 2rem 1rem; }
+    .content-section h1 { font-size: 2rem; }
+    .process-steps { flex-direction: column; }
+    .step { margin-bottom: 15px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Header (Note: This navigation will be updated by the index.html file) -->
+<header class="header">
+    <div class="logo">Orion Carbon</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contracts.html" class="active">Contracts & Agreements</a>
+        <a href="contact.html">Contact</a>
+        <a href="legal_compliance.html">Legal & Compliance</a>
+    </nav>
+</header>
+
+<!-- Content Section -->
+<section class="content-section">
+    <h1>Contracts & Agreements: Clear and Compliant Engagement</h1>
+    <p class="subtitle">Our world-class engagement process is governed by **Transparency** and legal **Excellence**, ensuring mutual clarity before project initiation.</p>
+
+    <!-- Agreements Overview -->
+    <div class="agreement-grid">
+        
+        <!-- Agreement 1: Development -->
+        <div class="agreement-card card-dev">
+            <h2>Development Service Agreement (DSA)</h2>
+            <p>For clients engaging us to develop and verify carbon credits from their emission-reduction projects.</p>
+            <ul>
+                <li>Defines MRV Scope and Methodology (linked to **Truth**).</li>
+                <li>Outlines fee structure: Development Fee + Annual MRV Fee + Success Fee (10-20% of issued credits).</li>
+                <li>Establishes ownership rights of the resulting verified credits.</li>
+            </ul>
+        </div>
+        
+        <!-- Agreement 2: Tokenization & Trading -->
+        <div class="agreement-card card-token">
+            <h2>Platform Terms & Smart Contract</h2>
+            <p>For users accessing our blockchain-enabled market for purchasing or retiring tokenized carbon assets.</p>
+            <ul>
+                <li>Governs use of the platform and digital asset trading.</li>
+                <li>Includes the legal framework for the underlying smart contracts (enforcing **Transparency**).</li>
+                <li>Details platform fees, settlement procedures, and asset retirement rules.</li>
+            </ul>
+        </div>
+        
+        <!-- Agreement 3: Academy -->
+        <div class="agreement-card card-academy">
+            <h2>Academy Training Contract</h2>
+            <p>For youth bursaries, corporate upskilling, and agreements with placement partners.</p>
+            <ul>
+                <li>Defines curriculum, duration, and certification standards (ensuring **Excellence**).</li>
+                <li>Outlines placement agreements for graduates joining the MRV field workforce.</li>
+                <li>Includes IP clauses for course materials and internal data protocols.</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Engagement Process -->
+    <div class="process-section">
+        <h2>The World-Class Engagement Process (Optimization)</h2>
+        <p style="text-align: center; margin-bottom: 30px;">We streamline legal onboarding to ensure a fast, efficient start to your carbon compliance strategy.</p>
+
+        <div class="process-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Initial Briefing & Scoping</h3>
+                <p>A consultation to define project scope and align on the required service (DSA, Platform Access, or Training).</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Drafting & Review</h3>
+                <p>We provide a comprehensive, tailored draft agreement for your internal legal review.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Digital Signature & Onboarding</h3>
+                <p>The contract is signed digitally. Your project team is immediately onboarded to the relevant Orion systems.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="legal-links">
+        <a href="legal_compliance.html#privacy">Privacy Policy</a>
+        |
+        <a href="legal_compliance.html#terms">Terms of Service</a>
+    </div>
+    &copy; 2025 Orion Carbon. All Rights Reserved. Committed to Excellence and Transparency.
+</footer>
+
+</body>
+</html>
