@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Orion Carbon - World Class Services</title>
+
+<!-- Load Inter Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* -------------------- Shared Styles (from index.html) -------------------- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body, html { font-family: 'Inter', sans-serif; background: #f5f7fa; color: #1a1a1a; line-height: 1.6; }
+a { text-decoration: none; color: inherit; }
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3.125rem;
+    background: #0b1f34;
+    color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.header .logo { font-weight: 800; font-size: 1.5rem; }
+.header nav a {
+    margin-left: 1.5625rem;
+    font-weight: 600;
+    color: #fff;
+    transition: color 0.3s ease;
+    padding: 5px 0;
+}
+.header nav a:hover,
+.header nav a.active { color: #00bfff; }
+
+/* Content Layout */
+.content-section { padding: 4rem 1.25rem; max-width: 1100px; margin: 0 auto; }
+.content-section h1 { font-size: 2.5rem; font-weight: 800; color: #0b1f34; margin-bottom: 0.5rem; text-align: center; }
+.content-section .subtitle { text-align: center; max-width: 800px; margin: 0 auto 50px auto; font-size: 1.1rem; color: #555; }
+.content-section p { margin-bottom: 1.5rem; font-size: 1.1rem; }
+
+/* Service Cards */
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+.card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(11, 31, 52, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 5px solid;
+    display: flex;
+    flex-direction: column;
+}
+.card-dev { border-top-color: #0077ff; }
+.card-token { border-top-color: #10b981; }
+.card-academy { border-top-color: #ff9900; }
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(11, 31, 52, 0.15);
+}
+.card h2 {
+    font-size: 1.8rem;
+    color: #0b1f34;
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+}
+.card .tag {
+    display: inline-block;
+    color: #fff;
+    font-weight: 700;
+    padding: 5px 15px;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+.card-dev .tag { background: #0077ff; }
+.card-token .tag { background: #10b981; }
+.card-academy .tag { background: #ff9900; }
+
+.card ul {
+    list-style: none;
+    padding: 0;
+    flex-grow: 1;
+}
+.card li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+.card li::before {
+    content: "→";
+    color: #0077ff;
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+}
+.card-token li::before { color: #10b981; }
+.card-academy li::before { color: #ff9900; }
+
+
+/* Synergy Section */
+.synergy {
+    margin-top: 5rem;
+    padding: 30px;
+    background: #e6f0ff; /* Light blue background */
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid #0077ff;
+}
+.synergy h2 {
+    font-size: 2rem;
+    color: #0b1f34;
+    margin-bottom: 1.5rem;
+}
+.synergy-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.synergy-item span {
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    color: #0b1f34;
+    margin: 0 10px;
+}
+.synergy-item .arrow {
+    font-size: 1.5rem;
+    color: #0077ff;
+}
+
+
+/* Footer */
+.footer { text-align: center; padding: 1.5625rem; background: #0b1f34; color: #fff; font-weight: 500; }
+.footer .legal-links a {
+    color: #00bfff;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+.footer .legal-links a:hover { color: #fff; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header { flex-direction: column; text-align: center; padding: 20px; }
+    .header nav { margin-top: 10px; display: flex; flex-wrap: wrap; justify-content: center; }
+    .header nav a { margin: 5px 10px; }
+    .content-section { padding: 2rem 1rem; }
+    .content-section h1 { font-size: 2rem; }
+    .synergy-item { flex-direction: column; }
+    .synergy-item span { margin: 5px 0; }
+    .synergy-item .arrow { display: none; }
+    .synergy-item::before { content: "↓"; margin: 5px 0; color: #0077ff; font-size: 1.5rem; }
+    .synergy-item:last-child::before { content: ""; } /* Hide arrow after the last item */
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+    <div class="logo">Orion Carbon</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="legal_compliance.html">Legal & Compliance</a>
+    </nav>
+</header>
+
+<!-- Content Section -->
+<section class="content-section">
+    <h1>Our World-Class Services: Excellence in Action</h1>
+    <p class="subtitle">Our service model is engineered for **Excellence** and **Optimization**, linking credit creation, trading, and talent development into a single, cohesive, transparent system.</p>
+
+    <div class="service-cards">
+        
+        <!-- Pillar 1: Development -->
+        <div class="card card-dev">
+            <span class="tag">SUPPLY | TRUTH & EXCELLENCE</span>
+            <h2>1. Carbon Credit Development</h2>
+            <p>We are the trusted source of high-integrity, compliant carbon credits. We manage the entire project lifecycle, ensuring compliance with the South African Carbon Tax Act and National Budgets.</p>
+            <h3>What We Deliver:</h3>
+            <ul>
+                <li>Full project lifecycle management (from conception to issuance).</li>
+                <li>Rigorous MRV (Measurement, Reporting, Verification) system setup.</li>
+                <li>Coordination with accredited third-party verifiers.</li>
+                <li>Submission of credits to accredited registries for final certification.</li>
+            </ul>
+        </div>
+        
+        <!-- Pillar 2: Tokenization -->
+        <div class="card card-token">
+            <span class="tag">MARKET | TRANSPARENCY & OPTIMIZATION</span>
+            <h2>2. Tokenization & Trading</h2>
+            <p>Leveraging blockchain technology to transform verified credits into secure, liquid digital assets. This is the core engine for **Transparency** in the market.</p>
+            <h3>What We Deliver:</h3>
+            <ul>
+                <li>Tokenization of certified credits onto the blockchain (ERC-20 standard).</li>
+                <li>Immutable, public ledger of all credit origins and retirement history.</li>
+                <li>Secure, fractionalized trading platform for industrial buyers and investors.</li>
+                <li>Smart contract infrastructure for transparent transaction settlement.</li>
+            </ul>
+        </div>
+        
+        <!-- Pillar 3: MRV Academy -->
+        <div class="card card-academy">
+            <span class="tag">TALENT | EXCELLENCE & OPTIMIZATION</span>
+            <h2>3. MRV Academy</h2>
+            <p>A commitment to human capital development and continuous quality. The Academy provides the trained staff that ensures the **Truth** and reliability of our data collection.</p>
+            <h3>What We Deliver:</h3>
+            <ul>
+                <li>Training programs in world-class MRV protocols for local South African talent.</li>
+                <li>A pipeline of certified field staff for Orion’s Carbon Credit Development division.</li>
+                <li>Corporate training and upskilling for client compliance teams.</li>
+                <li>Community-focused environmental and data collection workshops.</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Synergy Section -->
+    <div class="synergy">
+        <h2>The World-Class Orion Synergy: Our Competitive Edge</h2>
+        <p>No competitor offers this integrated model. Our three pillars operate in a continuous loop to guarantee integrity, efficiency, and sustainability:</p>
+        <div class="synergy-item">
+            <span>Development creates Credits</span>
+            <span class="arrow">→</span>
+            <span>Credits are Tokenized</span>
+            <span class="arrow">→</span>
+            <span>Trading Revenue is Generated</span>
+            <span class="arrow">→</span>
+            <span>Revenue Funds Academy Bursaries</span>
+            <span class="arrow">→</span>
+            <span>Academy Supplies MRV Workforce</span>
+        </div>
+        <p style="font-style: italic; margin-top: 20px;">This integrated system ensures total control over credit quality and provides a sustainable, circular economic model.</p>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="legal-links">
+        <a href="legal_compliance.html#privacy">Privacy Policy</a>
+        |
+        <a href="legal_compliance.html#terms">Terms of Service</a>
+    </div>
+    &copy; 2025 Orion Carbon. All Rights Reserved. Committed to Excellence and Transparency.
+</footer>
+
+</body>
+</html>
