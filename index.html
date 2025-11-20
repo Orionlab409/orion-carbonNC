@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Orion Carbon - Home</title>
+
+<!-- Load Inter Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* -------------------- Reset & Fonts -------------------- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body, html { font-family: 'Inter', sans-serif; background: #f5f7fa; color: #1a1a1a; line-height: 1.6; }
+a { text-decoration: none; color: inherit; }
+
+/* -------------------- Header -------------------- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3.125rem; /* 20px 50px */
+    background: #0b1f34; /* Deep Blue/Carbon */
+    color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.header .logo { font-weight: 800; font-size: 1.5rem; }
+.header nav a {
+    margin-left: 1.5625rem; /* 25px */
+    font-weight: 600;
+    color: #fff;
+    transition: color 0.3s ease;
+    padding: 5px 0;
+}
+.header nav a:hover,
+.header nav a.active { color: #00bfff; /* Sky Blue Highlight */ }
+
+/* -------------------- Hero Section -------------------- */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 7.5rem 1.25rem; /* 120px 20px */
+    background: linear-gradient(135deg, #dceefc 0%, #ffffff 100%);
+}
+.hero h1 {
+    font-size: 2.8rem; /* 42px */
+    font-weight: 800;
+    margin-bottom: 1.25rem; /* 20px */
+    color: #0b1f34;
+}
+.hero p {
+    font-size: 1.25rem; /* 20px */
+    max-width: 700px;
+    margin: 0 auto 1.875rem auto; /* 30px */
+    color: #333;
+}
+
+/* Hero Buttons & Input */
+.hero-buttons { margin-bottom: 1.25rem; display: flex; gap: 20px; justify-content: center;}
+.hero button {
+    background: #0077ff;
+    border: none;
+    color: #fff;
+    padding: 0.9375rem 1.875rem; /* 15px 30px */
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 119, 255, 0.3);
+}
+.hero button:hover {
+    background: #005fcc;
+    box-shadow: 0 6px 15px rgba(0, 119, 255, 0.5);
+}
+.email-input {
+    padding: 0.75rem 1.25rem; /* 12px 20px */
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: min(90%, 350px);
+    margin-bottom: 0.625rem; /* 10px */
+    text-align: center;
+}
+
+/* Status Messages (Custom Alert/Message Box) */
+.status-box {
+    margin-top: 1.25rem; /* 20px */
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+    min-height: 40px;
+    transition: all 0.4s ease;
+    max-width: 400px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.status-success {
+    background: #d0f0d0;
+    color: #047857;
+    border: 1px solid #10b981;
+}
+.status-error {
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #ef4444;
+}
+.status-default {
+    background: transparent;
+    color: #0077ff;
+    border: none;
+}
+
+/* -------------------- Footer -------------------- */
+.footer { text-align: center; padding: 1.5625rem; background: #0b1f34; color: #fff; font-weight: 500; }
+.footer .legal-links a {
+    color: #00bfff;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+.footer .legal-links a:hover { color: #fff; }
+
+/* -------------------- Responsive -------------------- */
+@media (max-width: 768px) {
+    .header { flex-direction: column; text-align: center; padding: 20px; }
+    .header nav { margin-top: 10px; display: flex; flex-wrap: wrap; justify-content: center; }
+    .header nav a { margin: 5px 10px; }
+    .hero h1 { font-size: 2rem; }
+    .hero p { font-size: 1rem; }
+    .hero-buttons { flex-direction: column; gap: 10px; }
+    .email-input { width: 90%; }
+    .hero button { width: 80%; margin: 0 auto; }
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+    <div class="logo">Orion Carbon</div>
+    <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="legal_compliance.html">Legal & Compliance</a>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <h1>Leading Blockchain Carbon Credit Platform</h1>
+    <p>Transparent, efficient, and sustainable carbon credit issuance and trading for industrial emitters and investors. Nothing less than world-class.</p>
+
+    <div class="hero-buttons">
+        <button onclick="connectWallet()">Connect MetaMask Wallet</button>
+        <button onclick="subscribe()">Subscribe to Our Newsletter</button>
+    </div>
+
+    <input type="email" id="email" placeholder="Enter your email" class="email-input">
+    
+    <!-- Unified Status Message Box -->
+    <div id="status-message" class="status-box status-default">Click 'Connect MetaMask Wallet' to begin your journey to Transparency.</div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="legal-links">
+        <a href="legal_compliance.html#privacy">Privacy Policy</a>
+        |
+        <a href="legal_compliance.html#terms">Terms of Service</a>
+    </div>
+    &copy; 2025 Orion Carbon. All Rights Reserved. Committed to Excellence and Transparency.
+</footer>
+
+<!-- External Scripts loaded at the end for stability -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Using the stable UMD version of Ethers.js (v5.7.2) to prevent module syntax errors. -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"></script>
+
+<script>
+// Helper function for displaying messages in the custom box
+function displayMessage(message, type = 'default') {
+    const statusElement = document.getElementById('status-message');
+    statusElement.innerHTML = message;
+    statusElement.className = `status-box status-${type}`;
+
+    if (type === 'success' || type === 'error') {
+        setTimeout(() => {
+            statusElement.innerHTML = "Click 'Connect MetaMask Wallet' to begin your journey to Transparency.";
+            statusElement.className = 'status-box status-default';
+        }, 5000);
+    }
+}
+
+/**
+ * Connects the user's MetaMask wallet.
+ */
+async function connectWallet() {
+    if (window.ethereum) {
+        try {
+            displayMessage("Attempting to connect...", 'default');
+            // Request accounts from MetaMask
+            const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+            
+            if (accounts.length === 0) {
+                displayMessage("Connection error: No accounts found.", 'error');
+                return;
+            }
+
+            const connectedAccount = accounts[0];
+            const displayAccount = `${connectedAccount.substring(0, 6)}...${connectedAccount.substring(connectedAccount.length - 4)}`;
+            
+            displayMessage(`✅ Wallet Connected: ${displayAccount}`, 'success');
+
+        } catch (error) {
+            console.error("MetaMask connection error:", error);
+            if (error.code === 4001) {
+                 displayMessage("⚠️ Connection Rejected: Please authorize MetaMask.", 'error');
+            } else {
+                displayMessage(`❌ Connection Failed. Error: ${error.message || 'Unknown issue.'}`, 'error');
+            }
+        }
+    } else {
+        displayMessage("❌ MetaMask Not Detected. Please install the browser extension to connect.", 'error');
+    }
+}
+
+/**
+ * Handles the email subscription.
+ */
+function subscribe() {
+    const emailInput = document.getElementById('email');
+    const email = emailInput.value.trim();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (email) {
+        if (emailRegex.test(email)) {
+            displayMessage(`Thank you, ${email}, for subscribing! We value your interest in our Transparency.`, 'success');
+            emailInput.value = '';
+        } else {
+            displayMessage('Please enter a valid email address.', 'error');
+        }
+    } else {
+        displayMessage('Please enter your email address to subscribe.', 'error');
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Check if the Ethers library is loaded (optional check)
+    if (typeof ethers !== 'undefined') {
+        displayMessage("Click 'Connect MetaMask Wallet' to begin your journey to Transparency.", 'default');
+    }
+});
+</script>
+
+</body>
+</html>
