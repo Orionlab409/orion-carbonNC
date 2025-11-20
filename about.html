@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Orion Carbon - About Us</title>
+
+<!-- Load Inter Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* -------------------- Shared Styles (from index.html) -------------------- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body, html { font-family: 'Inter', sans-serif; background: #f5f7fa; color: #1a1a1a; line-height: 1.6; }
+a { text-decoration: none; color: inherit; }
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3.125rem;
+    background: #0b1f34;
+    color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.header .logo { font-weight: 800; font-size: 1.5rem; }
+.header nav a {
+    margin-left: 1.5625rem;
+    font-weight: 600;
+    color: #fff;
+    transition: color 0.3s ease;
+    padding: 5px 0;
+}
+.header nav a:hover,
+.header nav a.active { color: #00bfff; }
+
+/* Content Layout */
+.content-section { padding: 4rem 1.25rem; max-width: 1000px; margin: 0 auto; }
+.content-section h1 { font-size: 2.5rem; font-weight: 800; color: #0b1f34; margin-bottom: 0.5rem; padding-bottom: 5px;}
+.content-section .subtitle { font-size: 1.2rem; margin-bottom: 2.5rem; color: #333; border-bottom: 3px solid #0077ff; padding-bottom: 10px;}
+.content-section h2 { font-size: 1.8rem; font-weight: 700; color: #0b1f34; margin-top: 2rem; margin-bottom: 1rem; }
+.content-section h3 { font-size: 1.4rem; font-weight: 600; color: #0077ff; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+.content-section p, .content-section ul { margin-bottom: 1.5rem; font-size: 1.1rem; }
+.content-section ul { list-style: none; padding-left: 0; }
+.content-section li { margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;}
+.content-section li::before {
+    content: "•"; /* Custom bullet point */
+    color: #0077ff;
+    font-size: 1.5em;
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
+
+/* Footer */
+.footer { text-align: center; padding: 1.5625rem; background: #0b1f34; color: #fff; font-weight: 500; }
+.footer .legal-links a {
+    color: #00bfff;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+.footer .legal-links a:hover { color: #fff; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header { flex-direction: column; text-align: center; padding: 20px; }
+    .header nav { margin-top: 10px; display: flex; flex-wrap: wrap; justify-content: center; }
+    .header nav a { margin: 5px 10px; }
+    .content-section { padding: 2rem 1rem; }
+    .content-section h1 { font-size: 2rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+    <div class="logo">Orion Carbon</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="legal_compliance.html">Legal & Compliance</a>
+    </nav>
+</header>
+
+<!-- Content Section -->
+<section class="content-section">
+    <h1>Nothing Less Than World-Class</h1>
+    <p class="subtitle">Orion Carbon's commitment to **Excellence** and **Transparency** defines the future of the African carbon market.</p>
+
+    <p>We believe that effective climate action requires **Truth** and verifiable data. Our foundation is built on blockchain technology to ensure the immutable integrity of every carbon credit. We focus exclusively on serving large industrial emitters in South Africa, helping them achieve compliance with the **Carbon Tax Act** and **Carbon Budgets** through optimized, transparent solutions.</p>
+
+    <h2>The Orion Synergistic Ecosystem</h2>
+    <p>Unlike competitors, Orion Carbon has engineered three interconnected divisions, ensuring quality control, end-to-end efficiency, and local capacity building. This structure guarantees that every credit sold meets our world-class standard.</p>
+
+    <ul>
+        <li>
+            <strong>Carbon Credit Development (Supply):</strong> The source of high-quality, verified assets. We manage the entire lifecycle, from baseline studies to submission to accredited registries.
+        </li>
+        <li>
+            <strong>Tokenization & Trading (Market):</strong> The engine of **Transparency**. We turn verified credits into secure, liquid digital assets tradeable on a public ledger.
+        </li>
+        <li>
+            <strong>MRV Academy (Talent):</strong> The investment in **Excellence**. We train local human capital in rigorous MRV (Measurement, Reporting, and Verification) protocols, providing the trained staff required for our Development projects.
+        </li>
+    </ul>
+
+    <h2>Our Core Operating Principles</h2>
+    <p>These four pillars guide every decision and operation across our ecosystem:</p>
+    <ul>
+        <li><strong>Truth:</strong> Verifiable, accurate data through rigorous MRV protocols.</li>
+        <li><strong>Excellence:</strong> Delivering best-in-class compliance technology that exceeds global standards.</li>
+        <li><strong>Optimization:</strong> Streamlining the value chain for maximum efficiency and reduced costs for our clients.</li>
+        <li><strong>Transparency:</strong> Using public, auditable ledgers to track every credit's origin and transaction history.</li>
+    </ul>
+
+    <h3>Our Regulatory Focus</h3>
+    <p>We are experts in the South African regulatory landscape, ensuring our clients not only comply with current **Carbon Budget** requirements but are also prepared for future regulatory evolution. Our technology simplifies complex compliance reporting, turning a burden into an asset.</p>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="legal-links">
+        <a href="legal_compliance.html#privacy">Privacy Policy</a>
+        |
+        <a href="legal_compliance.html#terms">Terms of Service</a>
+    </div>
+    &copy; 2025 Orion Carbon. All Rights Reserved. Committed to Excellence and Transparency.
+</footer>
+
+</body>
+</html>
